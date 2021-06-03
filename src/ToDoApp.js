@@ -15,6 +15,9 @@ function ToDoApp() {
         {id: 2, task: "Work", completed: false}
     ];
     const [todos, setTodos] = useState(initialTodos);
+    const addToDo = newToDoText =>{
+        setTodos([...todos, {id: 4, task: newToDoText, completed: false}])
+    }
     return (
         <Paper
             style={{
@@ -29,7 +32,7 @@ function ToDoApp() {
                     <Typography color='inherit'>TODOS WITH HOOKS</Typography>
                 </Toolbar>
             </AppBar>
-            <ToDoForm />
+            <ToDoForm addToDo={addToDo}/>
             <ToDoList todos={todos}/>
         </Paper>
     );
