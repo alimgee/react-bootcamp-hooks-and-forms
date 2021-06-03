@@ -11,12 +11,12 @@ import ToDoForm from './ToDoForm'
 
 function ToDoApp() {
     const initialTodos = [
-        {id: 1, task: "Code", completed: true},
-        {id: 2, task: "Work", completed: false}
+        { id: 1, task: "Code", completed: true },
+        { id: 2, task: "Work", completed: false }
     ];
     const [todos, setTodos] = useState(initialTodos);
-    const addToDo = newToDoText =>{
-        setTodos([...todos, {id: 4, task: newToDoText, completed: false}])
+    const addToDo = newToDoText => {
+        setTodos([...todos, { id: 4, task: newToDoText, completed: false }])
     }
     return (
         <Paper
@@ -32,8 +32,13 @@ function ToDoApp() {
                     <Typography color='inherit'>TODOS WITH HOOKS</Typography>
                 </Toolbar>
             </AppBar>
-            <ToDoForm addToDo={addToDo}/>
-            <ToDoList todos={todos}/>
+            <Grid container justify='center' style={{ marginTop: "1rem" }}>
+                <Grid item xs={11} md={8} lg={4}>
+                    <ToDoForm addToDo={addToDo} />
+                    <ToDoList todos={todos} />
+                </Grid>
+            </Grid>
+
         </Paper>
     );
 }
