@@ -5,7 +5,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 import ToDoList from './ToDoList';
-import ToDoForm from './ToDoForm'
+import ToDoForm from './ToDoForm';
+import ToDo from './ToDo';
 
 
 
@@ -38,6 +39,7 @@ function ToDoApp() {
                     <ToDoList todos={todos} />
                 </Grid>
             </Grid>
+            
 
         </Paper>
     );
