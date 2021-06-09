@@ -1,10 +1,8 @@
 import React from "react";
-import ToDoApp from './ToDoApp'
+import TodoApp from "./TodoApp";
 
 function App() {
-  return (
-    <ToDoApp/>
-  );
+  return <TodoApp />;
 }
 
 export default App;
